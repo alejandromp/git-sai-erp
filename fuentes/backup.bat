@@ -1,0 +1,1 @@
+C:\Archivos de programa\PostgreSQL\8.2\bin\pg_dump.exe -i -h localhost -p 5432 -U postgresql -F p -C -v -f "C:\Documents and Settings\usuario\Escritorio\sai.sql" sai

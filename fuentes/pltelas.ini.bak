@@ -1,0 +1,444 @@
+[CONEXION]
+Montoya0823
+
+dbparm = ConnectString='DSN=ps_sai_local;UID=postgres;PWD=admin',CommitOnDisconnect='No'
+|dbparm = ConnectString='DSN=ps_plasbenit_local;UID=postgres;PWD=admin',CommitOnDisconnect='No'
+
+|dbparm = ConnectString='DSN=ps_pltelas;UID=postgres;PWD=pltelas',CommitOnDisconnect='No'
+|dbparm = ConnectString='DSN=ps_pltelas_jupiter;UID=postgres;PWD=pltelas',CommitOnDisconnect='No'
+|dbparm = ConnectString='DSN=ps_pltasbenit_hamachi;UID=postgres;PWD=pltelas',CommitOnDisconnect='No'
+|dbparm = ConnectString='DSN=ps_pltelas_hamachi;UID=postgres;PWD=pltelas',CommitOnDisconnect='No'
+|dbparm = ConnectString='DSN=ps_decorespumas;UID=postgres;PWD=admin',CommitOnDisconnect='No'
+|dbparm = ConnectString='DSN=ps_colchones;UID=postgres;PWD=admin',CommitOnDisconnect='No'
+|dbparm = ConnectString='DSN=ps_puntocentro;UID=postgres;PWD=admin',CommitOnDisconnect='No'
+
+app = 'SI-ERP'
+desc_app = 'Sistema Administrativo Integrado'
+logo  = 'SI'
+
+|dbparm = ConnectString='DSN=ps_plasbenit;UID=postgres;PWD=admin',CommitOnDisconnect='No'
+
+|dbparm = ConnectString='DSN=sai_locogas;UID=DBA;PWD=SQL',CommitOnDisconnect='No'
+
+|dbparm = ConnectString='DSN=ps_pos_ovidio;UID=postgres;PWD=admin',CommitOconnect='No'
+|app = 'POS'
+|desc_app = ''
+|logo  = 'NO'
+
+|dbparm = ConnectString='DSN=SAI_SI_LOCAL;UID=postgres;PWD=gco',CommitOnDisconnect='No'
+|app = 'SI-POS'
+|desc_app = 'Soluciones Informáticas POS'
+|logo  = 'NO'
+
+
+[OTRO ALMACEN]
+|dbparm = ConnectString='DSN=ps_pltelas_hamachi;UID=postgres;PWD=pltelas',CommitOnDisconnect='No'
+|dbparm = ConnectString='DSN=ps_pltelas_jupiter;UID=postgres;PWD=pltelas',CommitOnDisconnect='No'
+|dbparm = ConnectString='DSN=ps_pltelas;UID=postgres;PWD=admin',CommitOnDisconnect='No'
+|dbparm = ConnectString='DSN=ps_plasbenit;UID=postgres;PWD=pltelas',CommitOnDisconnect='No'
+|dbparm = ConnectString='DSN=ps_plasbenit_local;UID=postgres;PWD=gco',CommitOnDisconnect='No'
+dbparm = ConnectString='DSN=ps_pltasbenit_hamachi;UID=postgres;PWD=pltelas',CommitOnDisconnect='No'
+
+app = 'SAI'
+desc_app = 'Sistema Administrativo Integrado'
+logo  = 'SI'
+
+/////////////////////////////////////////////ACTUALIZAR DISEÑO Y COLOR///////////////////////////////
+//  SELECT * FROM plt_referencia  
+//   WHERE ref_cantidad <> 0   
+//and ref_estado = 'inactivo';
+
+// UPDATE plt_referencia  SET ref_cantidad = 0
+//   WHERE ref_cantidad <> 0   
+//and ref_estado = 'inactivo';
+
+INSERT INTO plt_proveedor(
+            pro_proveedor, pro_nombre, pro_nit, pro_fecha, pro_estado, pro_iva, 
+            pro_plazo, pro_retenedor, pro_telefono, pro_direccion, pro_email, 
+            ciu_ciudad, pro_porcdscto, pro_porciva, pro_grancont, reg_regimen, 
+            pro_gasto)
+    VALUES (0;"SIN PROVEEDOR";"0";"2013-01-10";"activo";"S";0;"S";"0";"X";"X";7;0.00;16.00;"S";1;"");
+            
+//  SELECT * FROM plt_referencia  
+//   WHERE plt_referencia.pro_proveedor is NULL   ;
+
+//UPDATE plt_referencia  SET pro_proveedor = 0
+//   WHERE plt_referencia.pro_proveedor is NULL   ;
+
+
+//  SELECT *  FROM plt_referencia  
+//   WHERE ref_color = ''   ;
+
+//UPDATE  plt_referencia  SET ref_color = 0
+//   WHERE ref_color = ''   ;
+
+//  SELECT *  FROM plt_referencia  
+//   WHERE TRIM(ref_color) = ''  
+//and ref_estado = 'activo'  ;
+
+//UPDATE  plt_referencia  SET ref_color = 0
+//   WHERE TRIM(ref_color) = ''   
+//and ref_estado = 'activo'  ;
+
+
+//  SELECT *  FROM plt_referencia  
+//   WHERE ref_diseno = ''  ;
+
+//UPDATE  plt_referencia  SET ref_diseno = 0
+//   WHERE ref_diseno = ''   ;
+
+//  SELECT *  FROM plt_referencia  
+//   WHERE TRIM(ref_diseno) = ''  
+//and ref_estado = 'activo'  ;
+
+//UPDATE  plt_referencia  SET ref_color = 0
+//   WHERE TRIM(ref_diseno) = ''   
+//and ref_estado = 'activo'  ;
+
+//  SELECT *  FROM plt_movinv  
+//   WHERE ( plt_movinv.min_color = '' ) AND  
+//         ( plt_movinv.min_fcaja >= '2012/12/01' )   ;
+//
+//UPDATE plt_movinv  SET min_color = 0
+//   WHERE ( min_color = '' ) AND  
+//         ( min_fcaja >= '2012/12/01' )   ;
+
+//  SELECT *  FROM plt_movinv  
+//   WHERE ( plt_movinv.min_diseno = '' ) AND  
+//         ( plt_movinv.min_fcaja >= '2012/12/01' )   ;
+//
+//UPDATE plt_movinv  SET min_diseno = 0
+//   WHERE ( min_diseno = '' ) AND  
+//         ( min_fcaja >= '2012/12/01' )   ;
+
+//  SELECT *  FROM plt_movinv  
+//   WHERE ( trim(plt_movinv.min_color) = '' ) AND  
+//         ( plt_movinv.min_fcaja >= '2012/12/01' )   ;
+
+//UPDATE plt_movinv  SET min_color = 0
+//   WHERE ( trim(plt_movinv.min_color) = '' ) AND  
+//         ( plt_movinv.min_fcaja >= '2012/12/01' )   ;
+
+//  SELECT *  FROM plt_movinv  
+//   WHERE ( trim(plt_movinv.min_diseno) = '' ) AND  
+//         ( plt_movinv.min_fcaja >= '2012/12/01' )   ;
+
+//UPDATE plt_movinv  SET min_diseno = 0
+//   WHERE ( trim(plt_movinv.min_diseno) = '' ) AND  
+//         ( plt_movinv.min_fcaja >= '2012/12/01' )   ;
+
+
+
+
+
+PENDIENTES SABADO 13/ABRIL/2012
+
+Replantear la tirilla de cierre de caja
+Arreglar los medios de pago
+adionar devueltas
+y gran total
+los abonos  se deben discriminar por pedido o por cobro
+
+Revisar la tirilla de los abonos que no salga la palabra Factura de venta,sino Abono, y tampoco
+resoluciones, ni terminos como SOMOS AUTORRETENEDORES Y REGIMEN entre otros
+
+Informe de planilla mostrarlo agrupado o detallado(ya está detallado)
+en este debe quitar pagos a proveedores, pago a retefuente, pago reteiva, pago iva bimestral, compra sincha
+el concepto seguridad social si está bueno y tambien lo ingresa en la planilla de otros gastos, esta opcion la
+dejamos un mes mas y luego la desactivamos
+no deben sumar a los gastos, pero si mostrar el resumen al final(informativo)
+el informe no valida la empresa, trae lo mismo sin importar la empresa seleccionada
+
+Cargar los planos automáticamente
+645169
+//REPORTE DE PRODUCTOS ADICIONAR CAMPO CON PROMEDIO DE VENTAS MENSUAL EN LOS ULTIMOS 6 MESES
+
+INFORME DE RECAUDOS POR CLIENTE EN LOS CRITERIOS ADICIONAR EL VENDEDOR
+EN EL INFORME DE FACTURACIÓN POR PRODUCTO ADICIONAR COMO CRITERIO EL VENDEDOR
+EN EL INFORME DE GASTOS REVISAR PORQUE SALEN UNOS EN CERO. ARREGLARLO PARA QUE SALGA IGUAL QUE LAS COMPRAS CON TODOS
+LOS CONCEPTOS TRIBUTARIOS
+		 
+////revisa compras
+		   SELECT plt_saldoprov.*
+    FROM public.plt_detrecprov,   
+         public.plt_reciboprov,   
+         public.plt_saldoprov  
+   WHERE ( public.plt_detrecprov.rep_reciboprov = public.plt_reciboprov.rep_reciboprov ) and  
+         ( public.plt_reciboprov.pro_proveedor = public.plt_saldoprov.pro_proveedor ) and  
+         ( public.plt_saldoprov.emp_empresa = public.plt_reciboprov.emp_empresa ) and  
+         ( public.plt_saldoprov.tdc_dcmto = public.plt_detrecprov.tdc_dcmto ) and  
+         ( public.plt_saldoprov.slp_dcmto = public.plt_detrecprov.drp_dcmto ) and  
+         ( public.plt_saldoprov.emp_empresa = public.plt_detrecprov.emp_empresa ) and  
+         ( ( public.plt_detrecprov.emp_empresa = 1 ) AND  
+         ( public.plt_saldoprov.slp_saldo <> 0 ) AND  
+         ( public.plt_saldoprov.slp_estado <> 'anulado' ) )   ;
+		 
+Opción de ingreso de consignaciones (cheques ó efectivo) los cheques deben ser traidos de las cajas de los dos almacenes y
+controlar o marcar los que ya están consignados para que no vuelva a sugerir
+por cada cheques código de banco, número de cheque, número de cuenta, valor, fecha
+se inicia con febrero.
+
+Adicionar opcion para ingresar pagos manualmente para adicionar transferencias ABONO A TAR. CREDITO
+En la planilla adicionar en cptopago opción de cambiar medio de pago
+
+Adidionar opción de configuración de conceptos que se deben comparar desde el archivo del banco y modificar la
+función que compara para que los tome de ahi y no quemados
+
+Revisar informe de proveedores, hay compras tipo gasto que no salen en opción saldo por proveedor.
+
+En remisión no permitir ingresar el mismo número en el mismo proveedor
+
+
+
+
+Activar maestro de conceptos de gasto y poderle asociar una cuenta contable
+Informe-caja-planilla detallada
+Cada concepto de gasto tiene una cuenta contable asociada
+
+Recibos de proveedor 
+que se puedan pagar de los dos almacenes al tiempo
+
+Compras 
+guardar completo producto y compra y validación
+
+
+consulta de costo por compra por proveedor
+
+
+En la caja en los gastos que obligue dirección y telefono del proveedor
+
+Cierre mensual
+
+Quitar el CREE
+
+
+
+
+
+2msz78
+
+
+
+
+RECIBOS
+COMPRAS
+CARGAR FACTURACIÓN
+MAESTROS - LINEAS CIUDADES
+
+ SELECT public.plt_invdetplanilla.emp_empresa,   
+         public.plt_invdetplanilla.ivf_inventario,   
+         public.plt_invdetplanilla.ivp_planilla,
+		count(*)  
+    FROM public.plt_invdetplanilla  
+   WHERE public.plt_invdetplanilla.ivf_inventario = 4  
+group by 1,2,3
+order by 1,2,cast(ivp_planilla as integer);
+
+ update sai_actualizapc  set apc_actualiza = 'N' 
+   WHERE apc_actualiza = 'S'   ;
+   
+select * from f_rep_recibos(
+:li_empresa,
+:ls_cliente,
+:ld_fechaini,
+:ld_fechafin)
+AS
+(
+ cli_nombre character varying(100),   
+ cli_ccnit character varying(15),   
+  emp_nombre character varying(50),
+ emp_nit character varying(15),
+ rec_recibo double precision,   
+ rec_fecha date,   
+ rec_valor numeric(14,2),   
+ rec_estado character varying(15),   
+ rec_mescontab character varying(6),   
+ cli_telefono character varying(20,   
+ cli_direccion character varying(100),   
+ emp_empresa integer
+)
+
+
+//  SELECT *
+//    FROM public.plt_movcar  
+//   WHERE ( public.plt_movcar.emp_empresa = 1 ) AND  
+//         ( public.plt_movcar.mca_fcaja = '2015/03/16' )   ;
+//
+//
+//  SELECT *
+//    FROM public.plt_cierrecaja  
+//   WHERE ( public.plt_cierrecaja.emp_empresa = 1 ) AND  
+//         ( public.plt_cierrecaja.cca_fecha = '2015/03/16' )   ;
+//
+
+//  SELECT *
+//    FROM public.plt_pago  
+//   WHERE ( public.plt_pago.pag_fecha = '2015/03/16' ) AND  
+//         ( public.plt_pago.caj_caja = 1 )  
+//ORDER BY pag_dcmto ;
+
+//  SELECT *  
+//    FROM public.plt_movcar  
+//   WHERE ( public.plt_movcar.emp_empresa = 1 ) AND  
+//         ( public.plt_movcar.mca_dcmto = 427516 )   ;
+
+  UPDATE sai_actualizapc  SET apc_actualiza = 'S' 
+   WHERE apc_actualiza = 'S'   ;
+
+   
+   
+//  UPDATE plt_cliente SET   cli_ccnit = '4999999999'
+//   WHERE public.plt_cliente.cli_ccnit = '4'   ;
+//
+//  UPDATE plt_cliente SET   cli_ccnit = '5999999999'
+//   WHERE public.plt_cliente.cli_ccnit = '5'   ;
+//
+//  UPDATE plt_factura  SET fac_estado = 'anulado'
+//   WHERE public.plt_factura.fac_factura IN (720, 721);
+
+//  UPDATE plt_movcar SET mca_estado = 'anulado'  
+//   WHERE public.plt_movcar.mca_dcmto in (720,721)   ;
+
+//   UPDATE plt_movinv SET min_estado = 'anulado'  
+//   WHERE public.plt_movinv.min_dcmto in (720, 721)   ;
+//
+//  UPDATE plt_saldo SET sld_estado = 'anulado' 
+//   WHERE public.plt_saldo.sld_dcmto in (720,721)   ;
+
+
+
+
+///////////////////////////////////////////////////////QUERYS ANULAR FACTURA////////////////////////////777
+//  SELECT *
+//    FROM public.plt_factura  
+//   WHERE ( public.plt_factura.emp_empresa = 1 ) AND  
+//         ( public.plt_factura.fac_factura in ('123561')  )   
+//and tdc_tipodoc = 1;
+
+//  SELECT *
+//    FROM public.plt_movcar  
+//   WHERE ( public.plt_movcar.emp_empresa = 1 ) AND  
+//         ( public.plt_movcar.mca_dcmto in ('123561')  ) 
+//and tdc_dcmto = 1  ;
+
+//  SELECT *
+//    FROM public.plt_saldo  
+//   WHERE ( public.plt_saldo.emp_empresa = 1 ) AND  
+//         ( public.plt_saldo.tdc_dcmto = 1 ) AND  
+//         ( public.plt_saldo.sld_dcmto in ('123561') )   ;
+
+
+
+//  SELECT *
+//    FROM public.plt_movinv  
+//   WHERE ( public.plt_movinv.emp_empresa = 1 ) AND  
+//         ( public.plt_movinv.min_dcmto in ('123561')  ) AND  
+//         ( public.plt_movinv.tdc_dcmto = 1 )   ;
+
+//  SELECT *
+//    FROM public.plt_referencia  
+//   WHERE public.plt_referencia.ref_referencia = '000317'  
+////and ref_diseno = '0'
+//and ref_color = '1556' ;
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+///////////////////////////////////////////////////////QUERYS ANULAR ABONO EN CAJA////////////////////////////
+//  SELECT *
+//    FROM public.plt_factura  
+//   WHERE ( public.plt_factura.emp_empresa = 3  ) AND  
+//         ( public.plt_factura.fac_factura in ('25583')  )   
+//and tdc_tipodoc = 11;
+
+//  SELECT *
+//    FROM public.plt_movcar  
+//   WHERE ( public.plt_movcar.emp_empresa = 3 ) AND  
+//         ( public.plt_movcar.mca_dcmto in ('73668')  ) 
+//and tdc_dcmto = 11  ;
+
+//  SELECT *
+//    FROM public.plt_pago  
+//   WHERE ( public.plt_pago.emp_empresa = 3 ) AND  
+//         ( public.plt_pago.tdc_dcmto = 11 ) AND  
+//         ( public.plt_pago.pag_dcmto = 73668 )   ;
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////////////QUERYS ANULAR RECIBO DE CARTERA////////////////////////////
+//  SELECT *
+//    FROM public.plt_recibo  
+//   WHERE ( public.plt_recibo.emp_empresa = 3 ) AND  
+//         ( public.plt_recibo.rec_recibo = 25583 )   ;
+
+//  SELECT *
+//    FROM public.plt_detrecibo  
+//   WHERE ( public.plt_detrecibo.emp_empresa = 3 ) AND  
+//         ( public.plt_detrecibo.rec_recibo = 25583 )   ;
+
+
+//  SELECT *
+//    FROM public.plt_pago  
+//   WHERE ( public.plt_pago.emp_empresa = 3 ) AND  
+//         ( public.plt_pago.tdc_dcmto = 9 ) AND  
+//         ( public.plt_pago.pag_dcmto = 25583 )   ;
+
+//  SELECT *
+//    FROM public.plt_saldo  
+//   WHERE ( public.plt_saldo.emp_empresa = 3 ) AND  
+//         ( public.plt_saldo.tdc_dcmto = 1 ) AND  
+//         ( public.plt_saldo.sld_dcmto in ('84698') )   ;
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+pltelas2000...*
+plasti2015...*
+
+service smb status
+service postgresql-9.2 status
+
+
+Recaudo = factura menos facturas credito mas abonos
+
+
+Abonos a facturas según cierre
+	Caja 1   21970496
+	Caja 3    587298
+	total    22557794  ok
+
+Facturas contado según cierre
+	Caja 1   12581879
+	Caja 3    2911667
+	total    15493546  ok
+	
+
+Facturas crédito del día 21785175  ok
+Facturas contado del día  15493546   ok
+
+Total facturas del día    37278721   el reporte esta mostrando anuladas ejemplo la 135089 por eso da 37582722 dif 304000
+
+Abonos del día 22557794  ok
+
+Cobros del día 18002145
+
+==> RECAUDOS DEL DIA CONT, ABONOS COBROS =  
+						22557794 +  15493546 = 38051340 ok
+						
+==> Formula de sofia
+    Recaudo = factura menos facturas credito mas abonos
+			  37278721  -  21785175 + 22557794 = 38051340
+			                          22955544
+			                         
+			  31294715  -   15377631 + 22278683 =   38195767   
+			  
+			  
+			  32987692  + 5605825 =    38593517           
+
+
+
+	
